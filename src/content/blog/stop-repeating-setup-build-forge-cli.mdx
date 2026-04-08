@@ -1,0 +1,134 @@
+---
+title: "I got tired of setting up the same stack 50+ times — so I built this"
+date: 2026-04-09
+description: "I kept losing momentum setting up the same stacks again and again. So I built Forge - a CLI to automate setup and remove context switching from development"
+tags:
+  ["productivity", "developer-experience", "tooling", "cli", "build-in-public"]
+---
+
+I didn’t procrastinate because I was lazy.
+
+I procrastinated because I didn’t want to deal with setup.
+
+The idea was simple.
+
+One day I wanted to build a small app for myself — a simple fact memorization app.
+
+Every day it would show me 5-6 facts and tell me to add new facts to prepare for my competitive
+exams.
+
+Nothing complex. Just something useful. I was ready to build it.
+
+---
+
+## Then the Reality hit
+
+Before writing a single line of actual logic, I had to:
+
+- Set up Expo
+- Install NativeWind Packages
+- Configure NativeWind, Babel, and Metro
+- Wire Supabase into the app
+- Install and configure additional packages like Tanstack Query
+
+And I just paused. Because I've done this before. Not once. Not twice. But 50 to 60 times.
+
+---
+
+## The Real problem
+
+Setting things up isn't hard. That's not the issue. The issue is what it does to your brain.
+
+To setup a modern stack, you end up opening multiple tabs, reading scattered documentation, switching between configs, and debugging small annoying errors. Sometimes you miss one tiny step — like updating `metro.config.js` — and suddenly things break.
+
+Now you're debugging instead of building.
+
+---
+
+## And momentum is gone
+
+By the time NativeWind finally works, I've already lost most of my momentum. Not because I don't know what to do, but because my focus got fragmented.
+
+**The insight:** The problem isn't time. The problem is context switching.
+
+Your brain is wired for deep work. But setup forces you to jump between tabs, read docs, fix configs, and constantly shift context. Before you even start building the actual feature, you're already mentally tired.
+
+---
+
+## Repetition makes it worse
+
+The first time you set up a stack, you're no doubt learning.
+The tenth time, you're getting faster.
+The fiftieth time? You're just repeating yourself.
+
+At that point, it's no longer learning. It's just friction and wastage of time.
+
+---
+
+## So I built something for myself
+
+I didn't want to feel this every time I started a project. So I built a CLI tool called **Forge**.
+
+The philosophy is simple:
+
+> _Define your stack once. Reuse it forever_
+
+<img
+  src="https://cdn.jsdelivr.net/gh/AntarMukhopadhyaya/forge-dev/images/demo.gif"
+  alt="Forge CLI scaffolding a Next.js app with Better Auth and Drizzle in seconds"
+  style="border-radius: 10px; margin-top: 12px;"
+/>
+
+### What Forge does
+
+Forge lets you scaffold complete setups using presets. Instead of manually wiring everything every time, you just run:
+
+```bash
+npx @antardev/forge-dev init expo-nativewind-supabase my-app
+```
+
+And you're ready to start building.
+
+No configs. No context switching. Just start building.
+
+It comes with baked-in presets like:
+
+- Expo + NativeWind + Supabase
+- Next.js + Better-Auth + Drizzle
+- MERN stack
+
+### Bring your own setup
+
+But I didn't want to lock you into _my_ preferences. You can define your own **custom presets** or even run them directly from GitHub repositories. If your team has a specific starter kit, just point Forge to the repo, and it handles the rest.
+
+### What it doesn’t do
+
+Forge doesn’t generate business logic. It doesn’t try to be smart about your app's architecture. It only removes the most painful phase of development:
+
+`install → configure → glue`
+
+---
+
+## Why this matters
+
+Because the hardest part of building isn’t coding. It’s getting into flow. If starting your project feels annoying, you simply won’t start it.
+
+### What’s next?
+
+Right now, Forge uses predefined and custom-linked presets. But the next step is more interesting: **Recording setup steps and turning them into reusable presets automatically.** So you never repeat yourself again.
+
+---
+
+## Final thought
+
+I didn’t build Forge to save time. I built it to save momentum. Because once you lose that, starting becomes the hardest part.
+
+---
+
+### Try it out:
+
+📦 **[NPM Package](https://www.npmjs.com/package/@antardev/forge-dev)**
+
+🐙 **[GitHub Repository](https://github.com/AntarMukhopadhyaya/forge-dev)**
+
+_If you try Forge, I’d love to know what stack you build with it._
